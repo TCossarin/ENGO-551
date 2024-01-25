@@ -1,0 +1,46 @@
+// Nesting to control fonts
+body {
+    font-family: 'Arial', sans-serif; // default
+
+    // h1 with a one font
+    h1 {
+        font-family: 'Times New Roman', serif;
+        font-size: 2em;
+    }
+
+    // Other headers h2 with another font
+    h2 {
+        font-family: 'Georgia', serif;
+        font-weight: normal;
+    }
+
+    // Footer with a different font
+    footer {
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 0.9em;
+    }
+}
+
+
+// Inheritance to control font colour
+$base-color: #68b6ea;   // light blue
+
+%text-style {
+  font-family: Arial, sans-serif;
+}
+
+@mixin darken-text($amount) {
+  color: darken($base-color, $amount);
+}
+
+// blue gets darker with each section using inheritance
+section {
+  @extend %text-style;
+
+  &:nth-child(1) { @include darken-text(0%); }
+  &:nth-child(2) { @include darken-text(8%); }
+  &:nth-child(3) { @include darken-text(16%); }
+  &:nth-child(4) { @include darken-text(24%); }
+  &:nth-child(5) { @include darken-text(32%); }
+  &:nth-child(6) { @include darken-text(40%); }
+}

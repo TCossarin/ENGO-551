@@ -1,0 +1,88 @@
+/* Style for the modal backdrop */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Style for the modal content */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+td, th {
+border: 1px solid #dddddd;
+text-align: left;
+padding: 8px;
+}
+
+tr:nth-child(even) {
+background-color: #dddddd;
+}
+
+
+/* Stack resorts table if screen is narrow */
+@media (max-width: 1000px) {
+    #resorts, #resorts thead, #resorts tbody, #resorts th, #resorts td, #resorts tr {
+        display: block;
+    }
+
+    #resorts thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    #resorts tr {
+        margin-bottom: 10px;
+    }
+
+    #resorts td {
+        /* Make td act like a row */
+        border: none;
+        border-bottom: 1px solid gray;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    #resorts td:before {
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        text-align: left;
+    }
+}
