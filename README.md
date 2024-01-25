@@ -4,6 +4,8 @@ ENGO 551 - Adv. Topics on Geospatial Technologies
 
 Author: Tomas Cossarin
 
+Video Link: https://www.youtube.com/watch?v=PxrQp68Wkjk
+
 My website includes information about the four ski resorts near Denver, CO.
 
 index.html              - Homepage including basic information about each resort
